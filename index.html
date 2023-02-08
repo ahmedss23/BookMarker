@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="container pt-5">
+        <h3 class="text-secondary">Bookmarker</h3>
+        <hr>
+        <div class="bg-secondary text-center p-5">
+            <h4>Bookmark your favorite sites</h4>
+            <input type="hidden" id="bookmarkIndexInput">
+            <div class="col-10 m-auto my-3">
+                <label for="site_name" class="mb-2">Site Name</label>
+                <input type="text" id="bookmarkNameInput" class="form-control" oninput="validateName()">
+            </div>
+            <div class="col-10 m-auto alert alert-danger d-none" id="bookmarkNameAlert"></div>
+            <div class="col-10 m-auto my-3">
+                <label for="site_url" class="mb-2">Site URL</label>
+                <input type="text" id="bookmarkUrlInput" class="form-control" oninput="validateUrl()">
+            </div>
+            <div class="col-10 m-auto alert alert-danger d-none" id="bookmarkUrlAlert"></div>
+            <button class="btn btn-primary d-inline" id="addBookmarkBtn">Submit</button>
+            <div class="col-10 m-auto mt-3 d-none" id="updateBtns">
+                <button class="btn btn-info" id="updateBookmarkBtn">Update</button>
+                <button class="btn btn-info" id="cancelUpdateBookmarkBtn">Cancel</button>
+            </div>
+        </div>
+    </header>
+    <div class="container" id="bookmarks-container">
+        
+    </div>
+    <footer class="container">
+        <hr>
+        <span>© 2019 Bookmarker Inc.</span>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
